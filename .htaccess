@@ -1,0 +1,15 @@
+Options All -Indexes
+
+# 100 DAYS
+<FilesMatch "\.(jpg|jpeg|png|gif|swf|ico)$">
+Header set Cache-Control "max-age=2419200, public"
+ExpiresDefault "access plus 100 days"
+SetOutputFilter DEFLATE
+</FilesMatch>
+
+# 7 DAYS
+<FilesMatch "\.(xml|txt|css|js)$">
+Header set Cache-Control "max-age=604800, public"
+ExpiresDefault "access plus 1 week"
+SetOutputFilter DEFLATE
+</FilesMatch>
