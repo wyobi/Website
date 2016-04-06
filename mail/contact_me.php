@@ -1,4 +1,7 @@
 <?php
+ini_set("SMTP", "aspmx.l.google.com");
+ini_set("sendmail_from", "admin@wyobi.com");
+
 // check if fields passed are empty
 if(empty($_POST['name'])  		||
    empty($_POST['email']) 		||
