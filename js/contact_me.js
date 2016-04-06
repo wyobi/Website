@@ -19,20 +19,12 @@ $(function() {
                     url: "././mailchimp/process-subscribe.php",
                     type: "POST",
                     data: {
-                        email: subscribeEmail
+                        email: subscribeEmail,
+                        action: 'add'
                     },
                     cache: false,
                     success: function() {
-                        // Success message
-                        $('#subsc-success').html("<div class='alert alert-success'>");
-                        $('#subsc-success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                            .append("</button>");
-                        $('#subsc-success > .alert-success')
-                            .append("<strong>Your message has been sent. </strong>");
-                        $('#subsc-success > .alert-success')
-                            .append('</div>');
-    
-                        $('input#subscribe-email').val('');
+                      $('input#subscribe-email').val('');
                     },
                     error: function() {
                         // Fail message
