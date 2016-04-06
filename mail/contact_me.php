@@ -20,8 +20,9 @@ $email_subject = "Contact form submitted by:  $name";
 $email_body = "You have received a new message. \n\n".
 				  " Here are the details:\n \nName: $name \n ".
 				  "Email: $email_address\n Message \n $message";
-$headers = "From: info@wyobi.com\n";
-$headers .= "Reply-To: $email_address";	
+$headers = "";
+//$headers = "From: info@wyobi.com\n";
+//$headers .= "Reply-To: $email_address";	
 mail($to,$email_subject,$email_body,$headers);
 return true;			
 ?>
