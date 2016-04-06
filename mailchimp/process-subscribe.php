@@ -16,6 +16,7 @@ if (isset($_POST['action'])) { // Checking for submit action
 		else echo 'success|Done! Please check your email & confirm.'; // an success message
 	}
 } else { // Submit action false
+	header($_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error', true, 500);
 	header('Location: index.html');	
 }
 ?>
